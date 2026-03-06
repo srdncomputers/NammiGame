@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GameZone Kids — Play Together!</title>
-<meta name="description" content="Safe multiplayer mini-games for kids aged 8–15. Play with friends online!">
+<title>Nammi GameZone — Play Together!</title>
+<meta name="description" content="Nammi GameZone — Safe multiplayer mini-games for kids aged 8–15. Play with friends online!">
 <meta name="theme-color" content="#080812">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -638,8 +638,8 @@ footer{
 <header id="hdr">
   <div class="logo">
     <span class="logo-icon">🕹️</span>
-    <span>Game<em>Zone</em></span>
-    <span class="logo-pill">Kids</span>
+    <span>Nammi <em>GameZone</em></span>
+    <span class="logo-pill">KIDS</span>
   </div>
   <nav class="hnav">
     <a href="#games">Games</a>
@@ -664,7 +664,7 @@ footer{
     <div>
       <div class="hero-tag">🛡️ Safe for Ages 8–15</div>
       <h1>Play <span class="sh1">Awesome</span> Games<br>With <span class="sh2">Your Friends!</span></h1>
-      <p class="hero-sub">8 trending multiplayer mini-games. Challenge friends, climb the leaderboard, and have a blast — all in a safe, parent-approved space.</p>
+      <p class="hero-sub">8 trending multiplayer mini-games on Nammi GameZone. Challenge friends, climb the leaderboard, and have a blast — all in a safe, parent-approved space.</p>
       <div class="hero-btns">
         <button class="btn-main" onclick="openModal(games[0])">🚀 Play Now — It's Free</button>
         <button class="btn-sec" onclick="handleInvite()">🔗 Invite Friends</button>
@@ -768,14 +768,14 @@ footer{
 <!-- ═══════ FOOTER ═══════ -->
 <footer>
   <div class="foot-inner">
-    <div class="foot-logo">🕹️ Game<em>Zone Kids</em></div>
+    <div class="foot-logo">🕹️ Nammi <em>GameZone</em></div>
     <div class="foot-links">
       <a href="#safe">Safety</a>
       <a href="#" onclick="toast('📧 support@gamezonekids.com');return false">Support</a>
       <a href="#" onclick="toast('📜 Privacy policy coming soon!');return false">Privacy</a>
       <a href="#" onclick="toast('👨‍👩‍👧 Parent guide coming soon!');return false">For Parents</a>
     </div>
-    <p class="foot-copy">© 2026 GameZone Kids · Safe gaming for ages 8–15</p>
+    <p class="foot-copy">© 2026 Nammi GameZone · Safe gaming for ages 8–15</p>
   </div>
 </footer>
 
@@ -943,6 +943,10 @@ function closeModal(){
 function launchGame(){
   const name = activeGame?.title || 'the game';
   closeModal();
+  if(activeGame?.id === 'kart'){
+    window.location.href = 'kart.html';
+    return;
+  }
   toast(`🎮 Finding players for ${name}...`);
 }
 
